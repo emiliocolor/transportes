@@ -825,6 +825,17 @@ body {
         font-size: 2rem;
     }
 }
+.availability-badge {
+    background: linear-gradient(135deg, var(--primary-gray-dark) 0%, var(--primary-gray-darker) 100%);
+    color: white;
+    padding: 3px 20px;
+    display: inline-block;
+    font-size: 1.3rem; 
+    text-align: center;
+    min-width: 150px; 
+    font-weight: bold;
+}
+
 </style>
 
 </head>
@@ -931,121 +942,160 @@ body {
     </div>
 </section>
 
+<!-- Sección de Vehículos -->
+<div class="rounded-container mb-4" id="vehiculos">
+    <h2 class="section-title"><i class="fas fa-truck"></i> Nuestros Vehículos</h2>
+    <p class="mb-4">Camionetas de carga en excelente estado, listas para trabajar</p>
 
-    <!-- Sección de Vehículos -->
-    <div class="rounded-container mb-4" id="vehiculos">
-        <h2 class="section-title"><i class="fas fa-truck"></i> Nuestros Vehículos</h2>
-        <p class="mb-4">Camionetas de carga en excelente estado, listas para trabajar</p>
+    <div class="alert alert-info small" role="alert">
+        <i class="fas fa-info-circle me-2"></i>
+        Todos nuestros vehículos pasan por una rigurosa inspección mecánica antes de su venta.
+    </div>
 
-        <div class="alert alert-info small" role="alert">
-            <i class="fas fa-info-circle me-2"></i>
-            Todos nuestros vehículos pasan por una rigurosa inspección mecánica antes de su venta.
-        </div>
-
-        <div class="row g-4">
-
-<!-- Vehículo 1 - Ford F-350 -->
-<div class="col-md-6">
-    <div class="card tool-card p-3">
+    <!-- Filtros -->
+    <div class="filters mb-4">
         <div class="row g-3">
-            <div class="col-md-5">
-                <div class="product-images position-relative">
-                    <img src="img_transportes/ford-removebg-preview.png" alt="Ford F-350 2016" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/ford-removebg-preview.png" data-bs-title="Ford F-350 2016">
-                    <a href="https://www.facebook.com/marketplace/item/1534107097774888/?rdid=4Sqlxc5UME0Xkpzx&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CUuERs9RG%2F%23" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
-                    <a href="https://www.facebook.com/marketplace/item/1534107097774888/?rdid=4Sqlxc5UME0Xkpzx&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CUuERs9RG%2F%23" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
-                </div>
+            <div class="col-md-4">
+                <label for="marcaFiltro" class="form-label">Filtrar por marca</label>
+                <select id="marcaFiltro" class="form-select">
+                    <option value="todas">Todas</option>
+                    <option value="Ford">Ford</option>
+                    <option value="RAM">RAM</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Isuzu">Isuzu</option>
+                    <option value="Nissan">Nissan</option>
+                </select>
             </div>
-            <div class="col-md-7">
-                <h5>Ford F-350</h5>
-                <p class="small">Camioneta robusta de trabajo pesado, lista para seguir rindiendo.</p>
-                <ul class="small">
-                    <li><strong>Año:</strong> 2016</li>
-                    <li><strong>Kilometraje:</strong> 95,000 km originales</li>
-                    <li><strong>Transmisión:</strong> Estándar</li>
-                    <li><strong>Combustible:</strong> Gasolina</li>
-                    <li><strong>Capacidad de carga:</strong> 3.5 toneladas</li>
-                    <li><strong>Pintura:</strong> Original</li>
-                    <li><strong>Precio:</strong> A tratar</li>
-                </ul>
-                <p class="product-price fw-bold mt-2">DISPONIBLE</p>
-                <div class="d-flex gap-2 flex-wrap">
-                    <a href="mailto:emiliocolormexico@gmail.com?subject=Ford F-350 2016" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
-                    <a href="https://wa.me/525575586810?text=Hola,%20estoy%20interesado%20en%20la%20Ford%20F-350%202016%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
+            <div class="col-md-4">
+                <label for="anioFiltro" class="form-label">Filtrar por año</label>
+                <select id="anioFiltro" class="form-select">
+                    <option value="todos">Todos</option>
+                    <option value="2010">2010</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="disponibleFiltro">
+                    <label class="form-check-label" for="disponibleFiltro">
+                        Solo disponibles
+                    </label>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Vehículo 2 - RAM 4000 -->
-<div class="col-md-6">
-    <div class="card tool-card p-3">
-        <div class="row g-3">
-            <div class="col-md-5">
-                <div class="product-images position-relative">
-                    <img src="img_transportes/ram-removebg-preview.png" alt="RAM 4000 2019" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/ram-removebg-preview.png" data-bs-title="RAM 4000 2019">
-                    <a href="https://www.facebook.com/marketplace/item/1099107112126744/?rdid=mpuh9gggoJflTBms&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1B45xFcyqi%2F%23" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
-                    <a href="https://www.facebook.com/marketplace/item/1099107112126744/?rdid=mpuh9gggoJflTBms&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1B45xFcyqi%2F%23" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <h5>RAM 4000</h5>
-                <p class="small">Camioneta de gran capacidad con excelente desempeño y estado.</p>
-                <ul class="small">
-                    <li><strong>Año:</strong> 2019</li>
-                    <li><strong>Kilometraje:</strong> 75,000 km originales</li>
-                    <li><strong>Transmisión:</strong> Automática</li>
-                    <li><strong>Combustible:</strong> Gasolina</li>
-                    <li><strong>Capacidad de carga:</strong> 4 toneladas</li>
-                    <li><strong>Pintura:</strong> Original</li>
-                    <li><strong>Precio:</strong> A tratar</li>
-                </ul>
-                <p class="product-price fw-bold mt-2">DISPONIBLE</p>
-                <div class="d-flex gap-2 flex-wrap">
-                    <a href="mailto:emiliocolormexico@gmail.com?subject=RAM 4000 2019" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
-                    <a href="https://wa.me/525575586810?text=Hola,%20estoy%20interesado%20en%20la%20RAM%204000%202019%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
+    <!-- Vehículos -->
+    <div class="row g-4" id="vehiculosContainer">
+
+        <!-- Vehículo 1 - Ford F-350 -->
+        <div class="col-md-6" data-marca="Ford" data-anio="2016" data-disponible="true">
+            <div class="card tool-card p-3">
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <div class="product-images position-relative">
+                            <img src="img_transportes/ford-removebg-preview.png" alt="Ford F-350 2016" class="img-fluid rounded mb-2 vehicle-image">
+                            <a href="https://www.facebook.com/marketplace/item/1534107097774888" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
+                            <a href="https://www.facebook.com/marketplace/item/1534107097774888" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5>Ford F-350</h5>
+                        <p class="small">Camioneta robusta de trabajo pesado, lista para seguir rindiendo.</p>
+                        <ul class="small">
+                            <li><strong>Año:</strong> 2016</li>
+                            <li><strong>Kilometraje:</strong> 95,000 km originales</li>
+                            <li><strong>Transmisión:</strong> Estándar</li>
+                            <li><strong>Combustible:</strong> Gasolina</li>
+                            <li><strong>Capacidad de carga:</strong> 3.5 toneladas</li>
+                            <li><strong>Pintura:</strong> Original</li>
+                            <li><strong>Precio:</strong> A tratar</li>
+                        </ul>
+                        <p class="availability-badge fw-bold mt-2">
+                            <i class="fas fa-check me-2"></i> DISPONIBLE
+                        </p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="mailto:emiliocolormexico@gmail.com?subject=Ford F-350 2016" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
+                            <a href="https://wa.me/525547810563?text=Hola,%20estoy%20interesado%20en%20la%20Ford%20F-350%202016%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- Vehículo - Ford F-450 -->
-<div class="col-md-6">
-    <div class="card tool-card p-3">
-        <div class="row g-3">
-            <div class="col-md-5">
-                <div class="product-images position-relative">
-                    <img src="img_transportes/ford2-f450.png" alt="Ford F-450" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/ford2-f450.png" data-bs-title="Ford F-450 2010">
-                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">NO DISPONIBLE</span>
+        <!-- Vehículo 2 - RAM 4000 -->
+        <div class="col-md-6" data-marca="RAM" data-anio="2019" data-disponible="true">
+            <div class="card tool-card p-3">
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <div class="product-images position-relative">
+                            <img src="img_transportes/ram-removebg-preview.png" alt="RAM 4000 2019" class="img-fluid rounded mb-2 vehicle-image">
+                            <a href="https://www.facebook.com/marketplace/item/1099107112126744" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
+                            <a href="https://www.facebook.com/marketplace/item/1099107112126744" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5>RAM 4000</h5>
+                        <p class="small">Camioneta de gran capacidad con excelente desempeño y estado.</p>
+                        <ul class="small">
+                            <li><strong>Año:</strong> 2019</li>
+                            <li><strong>Kilometraje:</strong> 75,000 km originales</li>
+                            <li><strong>Transmisión:</strong> Automática</li>
+                            <li><strong>Combustible:</strong> Gasolina</li>
+                            <li><strong>Capacidad de carga:</strong> 4 toneladas</li>
+                            <li><strong>Pintura:</strong> Original</li>
+                            <li><strong>Precio:</strong> A tratar</li>
+                        </ul>
+                        <p class="availability-badge fw-bold mt-2">
+                            <i class="fas fa-check me-2"></i> DISPONIBLE
+                        </p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="mailto:emiliocolormexico@gmail.com?subject=RAM 4000 2019" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
+                            <a href="https://wa.me/525547810563?text=Hola,%20estoy%20interesado%20en%20la%20RAM%204000%202019%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-7">
-                <h5>Ford F-450</h5>
-                <p class="small">Camioneta de gran capacidad, confiable y lista para trabajar.</p>
-                <ul class="small">
-                    <li><strong>Año:</strong> 2010</li>
-                    <li><strong>Kilometraje:</strong> 100,000 km originales</li>
-                    <li><strong>Transmisión:</strong> Estándar</li>
-                    <li><strong>Combustible:</strong> Gasolina</li>
-                    <li><strong>Capacidad de carga:</strong> 5 toneladas</li>
-                    <li><strong>Pintura:</strong> Original</li>
-                    <li><strong>Precio:</strong> A tratar</li>
-                </ul>
-                <p class="product-price fw-bold mt-2 text-danger">NO DISPONIBLE</p>
+        </div>
+
+        <!-- Vehículo 3 - Ford F-450 -->
+        <div class="col-md-6" data-marca="Ford" data-anio="2010" data-disponible="false">
+            <div class="card tool-card p-3">
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <div class="product-images position-relative">
+                            <img src="img_transportes/ford2-f450.png" alt="Ford F-450" class="img-fluid rounded mb-2 vehicle-image">
+                            <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">VENDIDO</span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5>Ford F-450</h5>
+                        <p class="small">Camioneta de gran capacidad, confiable y lista para trabajar.</p>
+                        <ul class="small">
+                            <li><strong>Año:</strong> 2010</li>
+                            <li><strong>Kilometraje:</strong> 100,000 km originales</li>
+                            <li><strong>Transmisión:</strong> Estándar</li>
+                            <li><strong>Combustible:</strong> Gasolina</li>
+                            <li><strong>Capacidad de carga:</strong> 5 toneladas</li>
+                            <li><strong>Pintura:</strong> Original</li>
+                            <li><strong>Precio:</strong> A tratar</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
 <!-- Vehículo - Chevrolet Silverado 3500 -->
-<div class="col-md-6">
+<div class="col-md-6" data-marca="Chevrolet" data-anio="2019" data-disponible="false">
     <div class="card tool-card p-3">
         <div class="row g-3">
             <div class="col-md-5">
                 <div class="product-images position-relative">
                     <img src="img_transportes/silverado3500.png" alt="Chevrolet Silverado" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/silverado3500.png" data-bs-title="Chevrolet Silverado 3500 HD 2019">
-                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">NO DISPONIBLE</span>
+                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">VENDIDO</span>
                 </div>
             </div>
             <div class="col-md-7">
@@ -1060,20 +1110,19 @@ body {
                     <li><strong>Pintura:</strong> Original</li>
                     <li><strong>Precio:</strong> A tratar</li>
                 </ul>
-                <p class="product-price fw-bold mt-2 text-danger">NO DISPONIBLE</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Vehículo 7 - Isuzu Elf 2018 -->
-<div class="col-md-6">
+<!-- Vehículo - Isuzu Elf 2018 -->
+<div class="col-md-6" data-marca="Isuzu" data-anio="2018" data-disponible="false">
     <div class="card tool-card p-3">
         <div class="row g-3">
             <div class="col-md-5">
                 <div class="product-images position-relative">
                     <img src="img_transportes/izusu-removebg-preview.png" alt="Isuzu Elf 2018" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/izusu-removebg-preview.png" data-bs-title="Isuzu Elf 2018">
-                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">NO DISPONIBLE</span>
+                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">VENDIDO</span>
                 </div>
             </div>
             <div class="col-md-7">
@@ -1088,20 +1137,19 @@ body {
                     <li><strong>Pintura:</strong> Original</li>
                     <li><strong>Precio:</strong> A tratar</li>
                 </ul>
-                <p class="product-price fw-bold mt-2 text-danger">NO DISPONIBLE</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Vehículo 8 - Nissan Cabstar NT400 2018 -->
-<div class="col-md-6">
+<!-- Vehículo - Nissan Cabstar NT400 2018 -->
+<div class="col-md-6" data-marca="Nissan" data-anio="2018" data-disponible="false">
     <div class="card tool-card p-3">
         <div class="row g-3">
             <div class="col-md-5">
                 <div class="product-images position-relative">
                     <img src="img_transportes/nissan-removebg-preview.png" alt="Nissan Cabstar NT400 2018" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/nissan-removebg-preview.png" data-bs-title="Nissan Cabstar NT400 2018">
-                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">NO DISPONIBLE</span>
+                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">VENDIDO</span>
                 </div>
             </div>
             <div class="col-md-7">
@@ -1116,20 +1164,19 @@ body {
                     <li><strong>Pintura:</strong> Original</li>
                     <li><strong>Precio:</strong> A tratar</li>
                 </ul>
-                <p class="product-price fw-bold mt-2 text-danger">NO DISPONIBLE</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Vehículo 9 - RAM Pickup 2017 -->
-<div class="col-md-6">
+<!-- Vehículo - RAM Pickup 2017 -->
+<div class="col-md-6" data-marca="RAM" data-anio="2017" data-disponible="false">
     <div class="card tool-card p-3">
         <div class="row g-3">
             <div class="col-md-5">
                 <div class="product-images position-relative">
                     <img src="img_transportes/ram2-removebg-preview.png" alt="RAM Pickup 2017" class="img-fluid rounded mb-2 vehicle-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img_transportes/ram2-removebg-preview.png" data-bs-title="RAM Pickup 2017">
-                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">NO DISPONIBLE</span>
+                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">VENDIDO</span>
                 </div>
             </div>
             <div class="col-md-7">
@@ -1144,7 +1191,6 @@ body {
                     <li><strong>Pintura:</strong> Original</li>
                     <li><strong>Precio:</strong> A tratar</li>
                 </ul>
-                <p class="product-price fw-bold mt-2 text-danger">NO DISPONIBLE</p>
             </div>
         </div>
     </div>
@@ -1152,6 +1198,38 @@ body {
 
     </div>
 </div>
+
+<script>
+    const marcaFiltro = document.getElementById('marcaFiltro');
+    const anioFiltro = document.getElementById('anioFiltro');
+    const disponibleFiltro = document.getElementById('disponibleFiltro');
+    const vehiculos = Array.from(document.getElementById('vehiculosContainer').getElementsByClassName('col-md-6'));
+
+    function filtrarVehiculos() {
+        const marca = marcaFiltro.value;
+        const anio = anioFiltro.value;
+        const soloDisponibles = disponibleFiltro.checked;
+
+        vehiculos.forEach(vehiculo => {
+            const vMarca = vehiculo.getAttribute('data-marca');
+            const vAnio = vehiculo.getAttribute('data-anio');
+            const vDisponible = vehiculo.getAttribute('data-disponible') === 'true';
+
+            let mostrar = true;
+
+            if (marca !== 'todas' && vMarca !== marca) mostrar = false;
+            if (anio !== 'todos' && vAnio !== anio) mostrar = false;
+            if (soloDisponibles && !vDisponible) mostrar = false;
+
+            vehiculo.style.display = mostrar ? 'block' : 'none';
+        });
+    }
+
+    marcaFiltro.addEventListener('change', filtrarVehiculos);
+    anioFiltro.addEventListener('change', filtrarVehiculos);
+    disponibleFiltro.addEventListener('change', filtrarVehiculos);
+</script>
+
 
     <!-- Sección Nosotros -->
     <div class="rounded-container mb-4" id="nosotros">
@@ -1175,53 +1253,89 @@ body {
         
         <div class="history-section mt-4">
             <h3>Nuestra Historia y Compromiso</h3>
-            <p>Iniciando operaciones desde 1980, Mecánica automotriz especializada en vehículos pesados (nombre original) se consolidó como referente en el sector de transporte de carga en México, creando una colaboración estratégica con EmilioColor® en 2025 para ampliar su alcance y servicios y llevar este negocio al siguiente nivel. Nuestra misión es proporcionar soluciones vehiculares que impulsen la productividad de nuestros clientes, combinando calidad y servicio excepcional.</p>
+            <p>Iniciando operaciones desde 1980, nos consolidamos como un referente en el sector de transporte de carga en México, renombrandonos como EmilioColor® | Transportes en 2025 para ampliar nuestro alcance, servicios y llevar este negocio al siguiente nivel. Nuestra misión es proporcionar soluciones vehiculares que impulsen la productividad de nuestros clientes, combinando calidad y servicio excepcional.</p>
             
             <p>Desde nuestros inicios, nos hemos especializado en ofrecer vehículos de trabajo confiables y en excelente estado. Nuestras camionetas son seleccionadas cuidadosamente y sometidas a rigurosas revisiones mecánicas para garantizar su rendimiento y durabilidad.</p>
             <p>Trabajamos con personas que necesitan herramientas confiables para sus negocios, ofreciendo siempre la mejor relación calidad-precio del mercado.</p>
         </div>
     </div>
 
-    <!-- Sección de Ubicaciones -->
-    <div class="rounded-container mb-4" id="ubicaciones">
-        <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Nuestras Ubicaciones</h2>
-        <p>Visítanos en cualquiera de nuestras sucursales para conocer nuestros vehículos y recibir asesoría personalizada.</p>
-        
-        <div class="alert alert-info mt-4">
-            <i class="fas fa-info-circle me-2"></i>
-            <span>Para visitar nuestras instalaciones, primero debes <a href="#contacto" class="alert-link">contactarnos</a>.</span>
-        </div>
-        
-        <div class="row mt-4">
-            <div class="col-md-6 mb-4">
-                <div class="card tool-card h-100">
-                    <div class="location-map" style="height: 250px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.002110991965!2d-99.15920865116172!3d19.51567451779101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f825269fe25d%3A0x598c1529a798834f!2sTres%20Anegas%2069%2C%20Ampliaci%C3%B3n%20Progreso%20Nacional%2C%20Gustavo%20A.%20Madero%2C%2007650%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e1!3m2!1ses-419!2smx!4v1713945036671!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h3>Sucursal Gustavo A. Madero</h3>
-                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Tres Anegas 69, Ampliación Progreso Nacional, Gustavo A. Madero, 07650 Ciudad de México, CDMX</p>
-                        <p class="mb-2"><i class="fas fa-phone me-2"></i> +52 55 7558 6810</p>
-                        <p class="mb-0"><i class="fas fa-clock me-2"></i> Lunes a Viernes: 10:00 - 18:00</p>
-                    </div>
+<!-- Sección de Ubicaciones -->
+<div class="rounded-container mb-4" id="ubicaciones">
+    <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Nuestra Ubicación</h2>
+    <p><a href="#contacto" class="alert-link">Contactanos</a> para visitar nuestro almacén, conocer nuestros vehículos y recibir asesoría personalizada.</p>
+    
+    <div class="alert alert-info mt-4">
+        <i class="fas fa-info-circle me-2"></i>
+        <span>Para visitar nuestras instalaciones, primero debes <a href="#contacto" class="alert-link">contactarnos</a>.</span>
+    </div>
+    
+    <div class="row mt-4">
+        <!-- Columna con el mapa -->
+        <div class="col-md-6 mb-4">
+            <div class="card tool-card h-100">
+                <div class="location-map" style="height: 250px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d259.2422680835573!2d-99.15418615889128!3d19.520284219430216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f82f29b7cb53%3A0xd09cb4969276a6b6!2sAv.%20Guadalupe%2055%2C%20Guadalupe%20Proletaria%2C%20Gustavo%20A.%20Madero%2C%2007670%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e1!3m2!1ses-419!2smx!4v1713944805942!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="card-body">
+                    <h3>Almacén</h3>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Av. Guadalupe 55, Gustavo A. Madero, 07670 Ciudad de México, CDMX</p>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i> +52 55 7558 6810</p>
+                    <p class="mb-0"><i class="fas fa-clock me-2"></i> Lunes a Viernes: Con contacto previo en sucursal de ventas</p>
                 </div>
             </div>
-            
-            <div class="col-md-6 mb-4">
-                <div class="card tool-card h-100">
-                    <div class="location-map" style="height: 250px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d259.2422680835573!2d-99.15418615889128!3d19.520284219430216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f82f29b7cb53%3A0xd09cb4969276a6b6!2sAv.%20Guadalupe%2055%2C%20Guadalupe%20Proletaria%2C%20Gustavo%20A.%20Madero%2C%2007670%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e1!3m2!1ses-419!2smx!4v1713944805942!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h3>Álmacen</h3>
-                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Av. Guadalupe 55, Gustavo A. Madero, 07670 Ciudad de México, CDMX</p>
-                        <p class="mb-2"><i class="fas fa-phone me-2"></i> +52 55 7558 6810</p>
-                        <p class="mb-0"><i class="fas fa-clock me-2"></i> Lunes a Viernes: Con contacto previo en sucursal de ventas</p>
+        </div>
+
+        <!-- Columna adicional con información relevante -->
+        <div class="col-md-6 mb-4">
+            <div class="card tool-card h-100">
+                <div class="card-body">
+<h3 class="text-primary">
+    <h2 class="section-title"><i class="fas fa-map-marked-alt me-2"></i>¿Por que somos tu mejor opción?</h2>
+</h3>
+                    <ul class="list-unstyled mt-3">
+<ul class="list-unstyled mt-3">
+    <li class="mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <strong>Amplia variedad de vehículos disponibles</strong>  
+        <br>
+        Contamos con un inventario en gamas y modelos ideales para cada necesidad y presupuesto.
+    </li>
+
+    <li class="mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <strong>Trato directo</strong>  
+        <br>
+        Sin intermediarios ni complicaciones, habla directamente con nuestros asesores para recibir la mejor atención personalizada.
+    </li>
+
+    <li class="mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <strong>Seguridad</strong>  
+        <br>
+        En nuestras instalaciones garantizamos una experiencia de compra confiable y transparente.
+    </li>
+
+    <li class="mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <strong>Prueba de manejo</strong>  
+        <br>
+        Prueba el vehículo de tu interés para comprobar su comodidad, rendimiento y estado antes de tomar una decisión.
+    </li>
+</ul>
+
+                    </ul>
+
+                    <div class="text-center mt-3">
+                        <a href="#contacto" class="btn btn-primary">
+                            <i class="fas fa-phone me-2"></i> Contactar ahora
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <!-- Sección de Contacto -->
 <div class="rounded-container mb-4" id="contacto">
@@ -1235,34 +1349,34 @@ body {
     
     <div class="row mt-4">
         <!-- Contacto Vendedor Autorizado -->
-        <div class="col-md-6 mb-4">
-            <div class="contact-item p-3">
-                <!-- Ícono grande circulado centrado -->
-                <div class="icon-circle mb-3">
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <h5 class="text-center">Vendedor Autorizado</h5>
-                <p class="mb-2 text-center">Contacto directo para información específica de vehículos</p>
-                
-                <!-- Datos alineados a la izquierda -->
-                <div class="mb-3 d-flex align-items-center">
-                    <i class="fas fa-phone contact-icon me-2"></i>
-                    <span>+52 55 7558 6810</span>
-                </div>
-
-                <!-- Botones alineados a la izquierda -->
-                <div class="d-flex flex-wrap gap-2">
-                    <a href="tel:+525575586810" class="btn btn-outline-primary btn-sm">
-                        <i class="fas fa-phone me-1"></i> Llamar
-                    </a>
-                    <a href="https://wa.me/525575586810?text=Hola%2C%20estoy%20interesado%20en%20conocer%20tu%20cat%C3%A1logo%20de%20camionetas.%20%C2%BFPodr%C3%ADas%20compartirme%20las%20publicaciones%20disponibles%20en%20Marketplace%3F" 
-                       class="btn btn-success-gradient btn-sm" 
-                       target="_blank">
-                        <i class="fab fa-whatsapp me-1"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
+<div class="col-md-6 mb-4">
+    <div class="contact-item p-3">
+        <!-- Ícono grande circulado centrado -->
+        <div class="icon-circle mb-3">
+            <i class="fas fa-user-tie"></i>
         </div>
+        <h5 class="text-center">Vendedor Autorizado</h5>
+        <p class="mb-2 text-center">Contacto directo para información específica de vehículos</p>
+        
+        <!-- Datos alineados a la izquierda -->
+        <div class="mb-3 d-flex align-items-center">
+            <i class="fas fa-phone contact-icon me-2"></i>
+            <span>+52 55 4781 0563</span>
+        </div>
+
+        <!-- Botones alineados a la izquierda -->
+        <div class="d-flex flex-wrap gap-2">
+            <a href="tel:+525547810563" class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-phone me-1"></i> Llamar
+            </a>
+            <a href="https://wa.me/525547810563?text=Hola%2C%20estoy%20interesado%20en%20conocer%20tu%20cat%C3%A1logo%20de%20camionetas.%20%C2%BFPodr%C3%ADas%20compartirme%20las%20publicaciones%20disponibles%20en%20Marketplace%3F" 
+               class="btn btn-success-gradient btn-sm" 
+               target="_blank">
+                <i class="fab fa-whatsapp me-1"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
         
         <!-- Contacto EmilioColor México -->
         <div class="col-md-6 mb-4">
@@ -1483,4 +1597,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
-
