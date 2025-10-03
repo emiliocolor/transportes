@@ -835,6 +835,19 @@ body {
     min-width: 150px; 
     font-weight: bold;
 }
+.btn-purple-gradient {
+    background: linear-gradient(to right, #8e2de2 0%, #4a00e0 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-purple-gradient:hover {
+    background: linear-gradient(to right, #4a00e0 0%, #8e2de2 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 </style>
 
@@ -988,18 +1001,16 @@ body {
         </div>
     </div>
 
-    <!-- Vehículos -->
-    <div class="row g-4" id="vehiculosContainer">
-
-        <!-- Vehículo 1 - Ford F-350 -->
+    <!-- 
+    EJEMPLO DE VEHICULO EN VENTA
         <div class="col-md-6" data-marca="Ford" data-anio="2016" data-disponible="true">
             <div class="card tool-card p-3">
                 <div class="row g-3">
                     <div class="col-md-5">
                         <div class="product-images position-relative">
                             <img src="img_transportes/ford-removebg-preview.png" alt="Ford F-350 2016" class="img-fluid rounded mb-2 vehicle-image">
-                            <a href=" https://www.facebook.com/share/18a42Zhagu/?mibextid=wwXIfr" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
-                            <a href="https://www.facebook.com/share/18a42Zhagu/?mibextid=wwXIfr" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
+                            <a href="https://www.facebook.com/marketplace/item/1124172456359321/?ref=marketplace_profile&referral_code=undefined" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
+                            <a href="https://www.facebook.com/marketplace/item/1124172456359321/?ref=marketplace_profile&referral_code=undefined" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -1018,34 +1029,38 @@ body {
                             <i class="fas fa-check me-2"></i> DISPONIBLE
                         </p>
                         <div class="d-flex gap-2 flex-wrap">
-                            <a href="mailto:emiliocolormexico@gmail.com?subject=Ford F-350" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
+                            <a href="mailto:emiliocolormexico@gmail.com?subject=Ford F-350 2016" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
                             <a href="https://wa.me/525547810563?text=Hola,%20estoy%20interesado%20en%20la%20Ford%20F-350%202016%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        -->
 
-        <!-- Vehículo 2 - RAM 4000 -->
-        <div class="col-md-6" data-marca="RAM" data-anio="2019" data-disponible="true">
+    <!-- Vehículos -->
+    <div class="row g-4" id="vehiculosContainer">
+
+        <!-- Vehículo 1 - Ford F-350 -->
+        <div class="col-md-6" data-marca="Ford" data-anio="2016" data-disponible="true">
             <div class="card tool-card p-3">
                 <div class="row g-3">
                     <div class="col-md-5">
                         <div class="product-images position-relative">
-                            <img src="img_transportes/ram-removebg-preview.png" alt="RAM 4000 2019" class="img-fluid rounded mb-2 vehicle-image">
-                            <a href="https://www.facebook.com/marketplace/item/1099107112126744" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
-                            <a href="https://www.facebook.com/marketplace/item/1099107112126744" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
+                            <img src="img_transportes/ford-removebg-preview.png" alt="Ford F-350 2016" class="img-fluid rounded mb-2 vehicle-image">
+                            <a href="https://www.facebook.com/marketplace/item/1124172456359321/?ref=marketplace_profile&referral_code=undefined" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-none d-md-block">Más imágenes</a>
+                            <a href="https://www.facebook.com/marketplace/item/1124172456359321/?ref=marketplace_profile&referral_code=undefined" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-2 d-md-none">Más imágenes</a>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <h5>RAM 4000</h5>
-                        <p class="small">Camioneta de gran capacidad con excelente desempeño y estado.</p>
+                        <h5>Ford F-350</h5>
+                        <p class="small">Camioneta robusta de trabajo pesado, lista para seguir rindiendo.</p>
                         <ul class="small">
-                            <li><strong>Año:</strong> 2019</li>
-                            <li><strong>Kilometraje:</strong> 75,000 km originales</li>
-                            <li><strong>Transmisión:</strong> Automática</li>
+                            <li><strong>Año:</strong> 2016</li>
+                            <li><strong>Kilometraje:</strong> 95,000 km originales</li>
+                            <li><strong>Transmisión:</strong> Estándar</li>
                             <li><strong>Combustible:</strong> Gasolina</li>
-                            <li><strong>Capacidad de carga:</strong> 4 toneladas</li>
+                            <li><strong>Capacidad de carga:</strong> 3.5 toneladas</li>
                             <li><strong>Pintura:</strong> Original</li>
                             <li><strong>Precio:</strong> A tratar</li>
                         </ul>
@@ -1053,13 +1068,46 @@ body {
                             <i class="fas fa-check me-2"></i> DISPONIBLE
                         </p>
                         <div class="d-flex gap-2 flex-wrap">
-                            <a href="mailto:emiliocolormexico@gmail.com?subject=RAM 4000 2019" class="btn btn-outline-primary btn-sm">Contactar por Correo</a>
-                            <a href="https://wa.me/525547810563?text=Hola,%20estoy%20interesado%20en%20la%20RAM%204000%202019%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
+                            <a href="https://wa.me/525547810563?text=Hola,%20estoy%20interesado%20en%20la%20Ford%20F-350%202016%20de%20EmilioColor®" class="btn btn-success-gradient btn-sm" target="_blank">Contactar por WhatsApp</a>
+                        <a href="https://www.facebook.com/marketplace/item/1124172456359321/?ref=marketplace_profile&referral_code=undefined" 
+   class="btn btn-purple-gradient btn-sm" 
+   target="_blank">
+   Contactar por Messenger
+</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+<!-- Vehículo 2 - RAM 4000 -->
+<div class="col-md-6" data-marca="RAM" data-anio="2019" data-disponible="false">
+    <div class="card tool-card p-3">
+        <div class="row g-3">
+            <div class="col-md-5">
+                <div class="product-images position-relative">
+                    <img src="img_transportes/ram-removebg-preview.png" alt="RAM 4000 2019" class="img-fluid rounded mb-2 vehicle-image">
+                    <span class="btn btn-outline-danger btn-sm w-100 mt-2 disabled">VENDIDO</span>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h5>RAM 4000</h5>
+                <p class="small">Camioneta de gran capacidad con excelente desempeño y estado.</p>
+                <ul class="small">
+                    <li><strong>Año:</strong> 2019</li>
+                    <li><strong>Kilometraje:</strong> 75,000 km originales</li>
+                    <li><strong>Transmisión:</strong> Automática</li>
+                    <li><strong>Combustible:</strong> Gasolina</li>
+                    <li><strong>Capacidad de carga:</strong> 4 toneladas</li>
+                    <li><strong>Pintura:</strong> Original</li>
+                    <li><strong>Precio:</strong> A tratar</li>
+                </ul>
+                <!-- Se elimina la sección de disponibilidad y botones de contacto -->
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <!-- Vehículo 3 - Ford F-450 -->
         <div class="col-md-6" data-marca="Ford" data-anio="2010" data-disponible="false">
@@ -1499,6 +1547,10 @@ body {
                     <p><i class="fas fa-phone-alt"></i> +52 56 2537 7747</p>
                     <p><i class="fab fa-whatsapp"></i> +52 56 2537 7747</p>
                     <p><i class="fas fa-map-marker-alt"></i> Operando desde México</p>
+                      <a href="https://transportes.emiliocolor.com/accesos_rapidos">
+  <a href="https://transportes.emiliocolor.com/checar_documentos_de_camionetas">
+    <button>Checar documentos de camionetas</button>
+  </a> 
                 </div>
                 
                 <div class="footer-social">
