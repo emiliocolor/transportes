@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesos Rápidos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .card-description {
+            font-size: 14px;
+            color: #7f8c8d;
+            flex-grow: 1;
+        }
+        
+        .card-url {
+            font-size: 12px;
+            color: #3498db;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px 10px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
+
+        .footer-text {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .footer-logo {
+            width: 220px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Responsive para móviles */
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+
+            .footer-logo {
+                width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TRÁMITES DE CAMIONETAS</h1>
+            <p class="description">Accede rápidamente a tus servicios en línea</p>
+        </header>
+        
+        <div class="grid">
+            <a href="https://consultas-repuve.com/" class="card" target="_blank">
+                <div class="card-title">Consulta REPUVE</div>
+                <div class="card-description">consultas-repuve.com</div>
+                <div class="card-url">https://consultas-repuve.com/</div>
+            </a>
+
+            <a href="https://rapi.fgjcdmx.gob.mx/RAPI/vehiculo" class="card" target="_blank">
+                <div class="card-title">RAPI Vehículo</div>
+                <div class="card-description">Consulta de vehículos</div>
+                <div class="card-url">https://rapi.fgjcdmx.gob.mx/RAPI/vehiculo</div>
+            </a>
+
+            <a href="https://verificacfdi.facturaelectronica.sat.gob.mx/" class="card" target="_blank">
+                <div class="card-title">Verifica CFDI SAT</div>
+                <div class="card-description">Verificación de CFDI</div>
+                <div class="card-url">https://verificacfdi.facturaelectronica.sat.gob.mx/</div>
+            </a>
+            
+            <a href="https://tramitesdigitales.sat.gob.mx/Sicofi.ValidacionCFD/ValidacionUnitaria.aspx" class="card" target="_blank">
+                <div class="card-title">Validación CFD SAT</div>
+                <div class="card-description">Validación de CFD</div>
+                <div class="card-url">https://tramitesdigitales.sat.gob.mx/...</div>
+            </a>
+                     
+            <a href="https://tenencia.edomex.gob.mx/TenenciaIndividual/tenencia/A06E1A88B8A6ED4B#/" class="card" target="_blank">
+                <div class="card-title">Tenencia EDOMEX</div>
+                <div class="card-description">Tenencia Estado de México</div>
+                <div class="card-url">https://tenencia.edomex.gob.mx/...</div>
+            </a>
+            
+            <a href="https://data.finanzas.cdmx.gob.mx/consulta_adeudos" class="card" target="_blank">
+                <div class="card-title">Adeudos Ciudad de México</div>
+                <div class="card-description">Adeudos vehiculares</div>
+                <div class="card-url">https://data.finanzas.cdmx.gob.mx/consulta_adeudos...</div>
+            </a>
+
+            <a href="https://gobiernoenlinea1.jalisco.gob.mx/serviciosVehiculares/adeudo" class="card" target="_blank">
+                <div class="card-title">Adeudo Jalisco</div>
+                <div class="card-description">Adeudos vehiculares</div>
+                <div class="card-url">https://gobiernoenlinea1.jalisco.gob.mx/...</div>
+            </a>
+        </div>
+
+        <footer>
+            <p class="footer-text">Otro maravilloso producto traído para usted por:</p>
+            <a href="https://emiliocolor.com" target="_blank">
+                <img src="https://raw.githubusercontent.com/emiliocolor/clientes/d7c5a3b057a9752f53f1284b01b74284cb337e4d/img-logos/logo_azul_alargado_leyenda.png" 
+                     alt="Logo emiliocolor" 
+                     class="footer-logo">
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
